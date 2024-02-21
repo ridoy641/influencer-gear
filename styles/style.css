@@ -1,0 +1,130 @@
+/* Nav styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    margin: 0;
+}
+
+header{
+    background-color: bisque;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+
+nav>ul {
+    display: flex;
+    
+}
+nav>ul>li {
+    list-style: none;
+    margin-right: 20px;
+}
+nav a{
+    text-decoration: none;
+}
+ /*shared styles */
+.btn-primary {
+    border-radius: 8px;
+    background-color: brown;
+    color: white;
+    padding: 10px;
+}
+
+/* header section */
+.header-container {
+    display: flex;
+    background-image: url(../images/Circle\ design.svg);
+    background-repeat: no-repeat;
+    background-position-x: 950px;
+    background-position-y:90px;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    
+}
+
+
+
+.sponsor {
+    display: flex;
+    
+    justify-content: space-between;
+    margin: 100px 200px;
+}
+/* main section */
+.product-container {
+    margin: 5px 200px;
+    text-align: center;
+}
+.product-img {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.cart {
+    background-color: rgb(231, 227, 222);
+   
+    text-align: left;
+    padding:20px 10px 20px 20px;
+}
+.future-product {
+    display: flex;
+    
+    gap: 100px;
+    margin: 100px 200px;
+}
+
+
+
+
+
+
+
+
+
+@media  screen and (max-width:576px) {
+
+    nav, .header-container , .future-product{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        
+    }
+    .sponsor {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+     justify-content: center;
+      gap: 10px;
+    }
+    .product-container, .product-img {
+        grid-template-columns: repeat(1,1fr);
+        margin: 0px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width:992px){
+
+     .header-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        
+    }
+    .product-container, .product-img {
+        grid-template-columns: repeat(1,1fr);
+        margin: 0px;
+        justify-content: center;
+        text-align: center;
+    }
+    .sponsor {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       justify-content: center;
+        gap: 10px;}
+        
+}
